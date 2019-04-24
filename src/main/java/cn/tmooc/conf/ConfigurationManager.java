@@ -94,4 +94,17 @@ public class ConfigurationManager {
 	}
 
 
+	public static  Boolean getBoolean(String key){
+		 String value=getProperty(key);
+
+		 try {
+		 	return  Boolean.valueOf(value);
+		 }catch (Exception e){
+		 	 e.printStackTrace();
+		 }
+		 return  false;
+	}
+
+
+
 }
